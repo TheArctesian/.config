@@ -1,0 +1,39 @@
+# Private data
+obsidian/
+Signal/
+Slack/
+fish/fish_history
+fish/fish_variables
+cava/
+fish/conf.d/
+fish/functions/
+gh/
+gurk/
+keepmenu/
+libreoffice/
+ncspot/
+obs-studio/
+omf/
+zoom.zonf
+zoomus.conf
+# Hardware-specific
+pulse/
+systemd/
+
+# State and cache
+dconf/
+theme_state
+.DS_Store
+**/cache/
+**/Cache/
+
+# Media and large files
+obs-studio/recordings/
+*.mp4
+*.mkv
+*.log
+
+# Application data that changes frequently
+nautilus/
+mimeapps.list
+QtProject.conf
