@@ -1,0 +1,83 @@
+/*
+ * Power Menu theme for Rofi
+ * Based on One Dark color scheme
+ */
+
+@import "onedark"
+
+configuration {
+    font: "JetBrainsMono Nerd Font 14";
+    show-icons: false;
+    sidebar-mode: false;
+    hide-scrollbar: true;
+}
+
+window {
+    width: 350px;
+    border-radius: 6px;
+    background-color: @background;
+    border: 2px;
+    border-color: @red;
+    padding: 15px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ "inputbar", "listview" ];
+    spacing: 15px;
+}
+
+
+
+listview {
+    background-color: transparent;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    spacing: 10px;
+    columns: 1;
+    lines: 6;
+    fixed-height: true;
+}
+
+element {
+    background-color: transparent;
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    font: "JetBrainsMono Nerd Font 16";
+}
+
+element selected {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: 5px;
+}
+
+element.selected.urgent {
+    background-color: @alert;
+    text-color: @background;
+}
+
+element.selected.active {
+    background-color: @primary;
+    text-color: @background;
+}
+
+element.active {
+    background-color: @green;
+    text-color: @background;
+}
+
+element.urgent {
+    background-color: @alert;
+    text-color: @foreground;
+}

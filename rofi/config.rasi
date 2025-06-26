@@ -1,0 +1,84 @@
+configuration {
+    modi: "drun,run,window,ssh";
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    terminal: "ghostty";
+    
+    // Grid layout settings
+    columns: 4;
+    lines: 6;
+    
+    drun-display-format: "{name}";
+    location: 0;
+    
+    // Sort by most used
+    sort: true;
+    sorting-method: "fzf";
+    drun-match-fields: "name,generic,exec,categories,keywords";
+    
+    // Enable history and sorting by usage frequency
+    disable-history: false;
+    levenshtein-sort: false;
+    
+    // Store and use history
+    cache-dir: "~/.cache/rofi";
+    window-thumbnail: true;
+    
+    // Frequency matching and sorting
+    drun-use-desktop-cache: true;
+    drun-reload-desktop-cache: true;
+    
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: " 﩯  Window ";
+    display-ssh: "   SSH ";
+    
+    sidebar-mode: true;
+    combi-modi: "drun,run,window,ssh";
+    combi-hide-mode-prefix: true;
+    show-combi: true;
+}
+
+@theme "onedark"
+
+// Window layout customization
+window {
+    width: 45%;
+    height: 40%;
+    orientation: horizontal;
+}
+
+mainbox {
+    orientation: vertical;
+    children: [ inputbar, listview ];
+}
+
+listview {
+    columns: 4;
+    lines: 6;
+    fixed-columns: true;
+    fixed-height: false;
+    spacing: 10px;
+    padding: 10px;
+    scrollbar: false;
+    dynamic: true;
+}
+
+element {
+    padding: 8px;
+    spacing: 8px;
+    orientation: vertical;
+    border-radius: 2px;
+}
+
+element-icon {
+    size: 48px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}

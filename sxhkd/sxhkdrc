@@ -1,0 +1,156 @@
+# terminal emulator
+super + shift + Return
+	ghostty
+
+# program launcher (was going to do "d" for drun but finger movement is not nice of QWERT
+super + p
+	rofi -show drun
+
+# reload sxhkd config
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# quit/restart bspwm
+super + shift + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + {_,shift + }c
+	bspc node -{c,k}
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# alternate between tiled and monocle layout
+super + space
+	bspc desktop -l next
+
+# focus/swap nodes
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus or send to desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# resize window
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Markdown cheatsheet scratchpad
+super + a
+    alacritty --class "markdown_cheatsheet,markdown_cheatsheet" -e sh -c "bat ~/.config/sxhkd/cheatsheet.md | less"
+
+# focus the next/previous desktop in the current monitor (< >) 
+super + {less,greater}
+	bspc desktop -f {prev,next}.local
+
+# focus the next/previous desktop in the current monitor (< >) 
+super + {Left,Right}
+	bspc desktop -f {prev,next}.local
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+#send focused desktop to the monitor of target desktop
+super + ctrl + shift + {grave,asciicircum,1-9,0,ssharp,minus,equal,acute}
+	bspc desktop -m `bspc query -M -d {0,0,1-9,10,11,11,12,12} --names` --follow
+
+# Volume control with ALSA - no hooks
+XF86AudioRaiseVolume
+    amixer set Master 5%+
+
+XF86AudioLowerVolume
+    amixer set Master 5%-
+
+XF86AudioMute
+    amixer set Master toggle
+
+XF86AudioMicMute
+    amixer set Capture toggle
+
+# Brightness control - no hooks
+XF86MonBrightnessUp
+    brightnessctl set +5%
+
+XF86MonBrightnessDown
+    brightnessctl set 5%-
+
+# Power menu (using custom Rofi theme)
+super + Pause
+    ~/.config/polybar/scripts/powermenu.sh
+
+# Alternative power menu binding if Pause key isn't available
+super + shift + e
+    ~/.config/polybar/scripts/powermenu.sh
+
+# Clipboard menu (using custom Rofi theme)
+super + v
+    ~/.config/polybar/scripts/clipboard-menu.sh
+
+# --- Application Shortcuts ---
+
+# Obsidian - Super + o
+super + o
+    if pgrep -f "obsidian" > /dev/null; then \
+        wid=$(xdo id -N Obsidian || xdo id -N obsidian); \
+        [ -n "$wid" ] && bspc node "$wid" -f || obsidian & \
+    else \
+        obsidian & \
+    fi
+
+# Zotero - Super + z
+super + z
+    if pgrep -f "zotero" > /dev/null; then \
+        wid=$(xdo id -N Zotero || xdo id -N zotero); \
+        [ -n "$wid" ] && bspc node "$wid" -f || zotero & \
+    else \
+        zotero & \
+    fi
+
+# Signal - Super + g (for messaging)
+super + g
+    if pgrep -f "signal" > /dev/null; then \
+        wid=$(xdo id -N Signal || xdo id -N signal); \
+        [ -n "$wid" ] && bspc node "$wid" -f || signal-desktop & \
+    else \
+        signal-desktop & \
+    fi
+
+# Slack - Super + m (for messaging)
+super + m
+    if pgrep -f "slack" > /dev/null; then \
+        wid=$(xdo id -N Slack || xdo id -N slack); \
+        [ -n "$wid" ] && bspc node "$wid" -f || slack & \
+    else \
+        slack & \
+    fi
+
+# Firefox - Super + b (for browser) - fixed shortcut key
+super + b
+    if pgrep -f "firefox" > /dev/null; then \
+        wid=$(xdo id -N Firefox || xdo id -N firefox); \
+        [ -n "$wid" ] && bspc node "$wid" -f || firefox & \
+    else \
+        firefox & \
+    fi
+
+# Yazi file manager - Super + y
+# Launch in a ghostty terminal with a specific class for easier identification
+super + y
+    ghostty --class "yazi,yazi" -e yazi
+
+# Screenshot tools with Flameshot
+# Full screenshot - Print key
+Print
+    flameshot full -c
+
+# Interactive screenshot (select area) 
+super + shift + s
+    flameshot gui -c
+
+# Delayed screenshot (3 seconds) - Control + Print
+control + Print
+    flameshot full -c -d 3000
+

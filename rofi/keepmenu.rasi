@@ -1,0 +1,121 @@
+* {
+    /* Atom One Dark colors */
+    background:     #282C34;
+    background-alt: #3B4252;
+    foreground:     #ABB2BF;
+    selected:       #61AFEF;
+    active:         #98C379;
+    urgent:         #E06C75;
+    border-color:   #61AFEF;
+    
+    border:         0;
+    margin:         0;
+    padding:        0;
+    spacing:        0;
+}
+
+window {
+    background-color: @background;
+    border:           1px;
+    border-color:     @border-color;
+    border-radius:    8px;
+    padding:          15px;
+    width:            40%;
+    transparency:     "real";
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+message {
+    border:       2px 0 0;
+    border-color: @border-color;
+    padding:      8px;
+}
+
+textbox {
+    background-color: @background;
+    text-color:       @foreground;
+}
+
+inputbar {
+    children:    [ prompt, textbox-prompt-colon, entry, case-indicator ];
+    padding:     8px;
+    spacing:     8px;
+    text-color:  @foreground;
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0 0.3em 0 0;
+    text-color: @foreground;
+}
+
+entry {
+    text-color: @foreground;
+}
+
+case-indicator {
+    text-color: @foreground;
+}
+
+prompt {
+    text-color: @active;
+}
+
+listview {
+    lines:      12;
+    columns:    1;
+    fixed-height: false;
+    border:     0;
+    padding:    8px 0;
+    scrollbar:  true;
+}
+
+element {
+    border:  0;
+    padding: 8px;
+    spacing: 8px;
+}
+
+element normal.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+
+element selected.normal {
+    background-color: @background-alt;
+    text-color:       @selected;
+    border-radius:    6px;
+}
+
+element alternate.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+
+scrollbar {
+    width:        4px;
+    border:       0;
+    handle-color: @selected;
+    handle-width: 8px;
+    padding:      0;
+}
+
+mode-switcher {
+    border: 2px 0 0;
+    border-color: @border-color;
+}
+
+button {
+    spacing:    0;
+    text-color: @foreground;
+}
+
+button selected {
+    background-color: @background-alt;
+    text-color:       @selected;
+}

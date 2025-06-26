@@ -1,0 +1,10 @@
+[window]
+dynamic_title = true 
+decorations = "None"
+opacity = 0.8
+padding = { x = 20, y = 10 }
+blur = true 
+
+[font]
+size = 12.0
+offset = { x = 2, y = 2 }

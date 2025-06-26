@@ -1,0 +1,100 @@
+/*
+ * Clipboard menu theme for Rofi
+ * Based on One Dark color scheme
+ */
+
+@import "onedark"
+
+configuration {
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: false;
+    terminal: "ghostty";
+    case-sensitive: false;
+    cycle: true;
+    sidebar-mode: false;
+}
+
+window {
+    width: 30%;
+    border-radius: 6px;
+    background-color: @background;
+    border: 2px;
+    border-color: @primary;
+    padding: 10px;
+}
+
+mainbox {
+    border: 0;
+    padding: 0;
+    background-color: @background;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @background;
+    border-radius: 6px;
+    margin: 2px 2px 2px 2px;
+}
+
+prompt {
+    padding: 2px 6px 0px 0px;
+    background-color: @background;
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: @disabled;
+    text-color: @foreground;
+    background-color: @background;
+}
+
+listview {
+    border: 0px;
+    spacing: 5px;
+    scrollbar: false;
+    background-color: @background;
+    lines: 10;
+    columns: 1;
+}
+
+element {
+    border: 0;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element selected {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: 4px;
+}
+
+element selected.urgent {
+    background-color: @alert;
+    text-color: @foreground;
+}
+
+element selected.active {
+    background-color: @primary;
+    text-color: @background;
+}
+
+button {
+    padding: 4px;
+    background-color: @background-alt;
+    text-color: @foreground;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+button selected {
+    background-color: @primary;
+    text-color: @background;
+}

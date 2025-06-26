@@ -1,0 +1,133 @@
+[global]
+    ### Display ###
+    monitor = 0
+    follow = mouse
+    
+    # The geometry of the window (new syntax)
+    width = 300
+    height = (0, 300)  # Dynamic height up to 300
+    origin = top-center  # Position at the top center of the screen
+    offset = (0, 5)  # Offset from the top by 40 pixels
+    scale = 0
+    
+    # Show how many messages are currently hidden (because of geometry)
+    indicate_hidden = yes
+    
+    # Shrink window if it's smaller than the width
+    shrink = no
+    
+    # Draw a line of "separator_height" pixel height between notifications
+    separator_height = 2
+    
+    # Padding between text and separator
+    padding = 8
+    horizontal_padding = 10
+    
+    # Frame around the notification window
+    frame_width = 2
+    
+    # Define a color for the separator
+    separator_color = frame
+    
+    # Sort messages by urgency
+    sort = yes
+    
+    # Don't remove messages, if the user is idle (no mouse or keyboard input)
+    idle_threshold = 120
+    
+    # Default timeout (in seconds)
+    timeout = 2  # Default 2 seconds for all notifications
+
+    ### Text ###
+    font = JetBrainsMono Nerd Font 10
+    
+    # The spacing between lines
+    line_height = 0
+    
+    # Use HTML markup
+    markup = full
+    
+    # The format of the message
+    format = "<b>%s</b>\n%b"
+    
+    # Alignment of message text
+    alignment = center
+    
+    # Vertical alignment of message text
+    vertical_alignment = center
+    
+    # Show age of message if message is older than show_age_threshold
+    show_age_threshold = 60
+    
+    # Wrap text if it doesn't fit in geometry
+    word_wrap = yes
+    
+    # Where to place ellipsis in long lines
+    ellipsize = middle
+    
+    # Ignore newlines '\n' in notifications
+    ignore_newline = no
+    
+    # Stack together notifications with the same content
+    stack_duplicates = true
+    
+    # Hide the count of stacked notifications with the same content
+    hide_duplicate_count = false
+    
+    # Display indicators for URLs (U) and actions (A)
+    show_indicators = yes
+
+    ### Icons ###
+    icon_position = left
+    min_icon_size = 0
+    max_icon_size = 32
+    
+    # Extended icon path to include more possible locations
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/apps/:/usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/hicolor/16x16/status/:/usr/share/icons/hicolor/16x16/devices/:/run/current-system/sw/share/icons/Papirus-Dark/16x16/status/:/run/current-system/sw/share/icons/Papirus-Dark/16x16/devices/:/run/current-system/sw/share/icons/Adwaita/16x16/status/:/run/current-system/sw/share/icons/hicolor/16x16/status/
+
+    ### History ###
+    sticky_history = yes
+    history_length = 20
+
+    ### Misc/Advanced ###
+    dmenu = /usr/bin/rofi -dmenu -p dunst:
+    browser = /usr/bin/firefox --new-tab
+    
+    # Always run rule-defined scripts, even if the notification is suppressed
+    always_run_script = true
+    
+    # Define the title of the windows spawned by dunst
+    title = Dunst
+    
+    # Define the class of the windows spawned by dunst
+    class = Dunst
+    
+    # Mouse actions
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+    # Rounded corners
+    corner_radius = 6
+
+    # Atom One Dark colors
+    frame_color = "#61AFEF"
+    separator_color = "#61AFEF"
+
+[urgency_low]
+    background = "#282C34"
+    foreground = "#ABB2BF"
+    frame_color = "#61AFEF"
+    timeout = 3  
+
+[urgency_normal]
+    background = "#282C34"
+    foreground = "#ABB2BF"
+    frame_color = "#61AFEF"
+    timeout = 3  
+
+[urgency_critical]
+    background = "#282C34"
+    foreground = "#E06C75"
+    frame_color = "#E06C75"
+    timeout = 6
