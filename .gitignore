@@ -12,7 +12,13 @@ gurk/
 keepmenu/
 libreoffice/
 ncspot/
-obs-studio/
+obs-studio/logs/
+obs-studio/global.ini
+obs-studio/profile_data/
+obs-studio/plugin_config/
+obs-studio/safe_mode
+obs-studio/updates/
+
 omf/
 zoom.zonf
 zoomus.conf
@@ -37,3 +43,11 @@ obs-studio/recordings/
 nautilus/
 mimeapps.list
 QtProject.conf
+lock.sh.xessionfail
+nvim/Neovim_CheatSheet.md
+nvim/lazy-lock.json
+qt5ct/
+sxhkd/cheatsheet.md
+sxhkd/sxhkdrc.bak
+wtf/log.txt
+zoom.conf
