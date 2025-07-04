@@ -16,7 +16,7 @@ starship init fish | zoxide init fish | source
 # ==============================
 function fish_greeting
     pfetch
-    feh --bg-fill --randomize $HOME/Pictures/onedark-wallpapers/*
+    feh --bg-fill --randomize $HOME/Pictures/wallpaper/*
 end
 
 # ==============================
