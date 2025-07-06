@@ -15,8 +15,7 @@ starship init fish | zoxide init fish | source
 # Greeting & Appearance
 # ==============================
 function fish_greeting
-    pfetch
-    feh --bg-fill --randomize $HOME/Pictures/wallpaper/*
+    pfetch feh --bg-fill --randomize $HOME/Pictures/wallpaper/*
 end
 
 # ==============================
@@ -134,6 +133,7 @@ alias pro="cd $HOME/Scripts/Project"
 
 alias nixconf="sudo vim /etc/nixos/configuration.nix"
 alias nixrs="sudo nixos-rebuild switch"
+alias nixup="sudo nix-channel --update"
 alias svim="sudo vim"
 # ==============================
 # Aliases - Git
