@@ -26,6 +26,9 @@ zoomus.conf
 # Hardware-specific
 pulse/
 systemd/
+kdeconnect/
+keepassxc/
+Ladybird/
 
 # State and cache
 dconf/

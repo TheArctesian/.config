@@ -131,3 +131,7 @@
     foreground = "#E06C75"
     frame_color = "#E06C75"
     timeout = 6
+
+[brave]
+timeout = 0
+format = %s
