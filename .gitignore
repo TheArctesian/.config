@@ -18,6 +18,8 @@ obs-studio/profile_data/
 obs-studio/plugin_config/
 obs-studio/safe_mode
 obs-studio/updates/
+BraveSoftware/
+kwalletrc
 
 omf/
 zoom.zonf
@@ -25,6 +27,9 @@ zoomus.conf
 # Hardware-specific
 pulse/
 systemd/
+kdeconnect/
+keepassxc/
+Ladybird/
 
 # State and cache
 dconf/

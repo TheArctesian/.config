@@ -16,7 +16,7 @@ starship init fish | zoxide init fish | source
 # ==============================
 function fish_greeting
     pfetch
-    feh --bg-fill --randomize $HOME/Pictures/onedark-wallpapers/*
+    feh --bg-fill --randomize $HOME/Pictures/wallpaper/*
 end
 
 # ==============================
@@ -29,6 +29,15 @@ alias py="python3"
 alias server="browser-sync start -s -f . --no-notify --host $LOCAL_UP --port 9000"
 alias clok="tty-clock -c -C 4 -S"
 alias copy="xclip -sel c <"
+
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
 
 # Paste clipboard content to a file (replacing entire file)
 function past
@@ -134,6 +143,9 @@ alias pro="cd $HOME/Scripts/Project"
 
 alias nixconf="sudo vim /etc/nixos/configuration.nix"
 alias nixrs="sudo nixos-rebuild switch"
+alias nixrsug="sudo nixos-rebuild switch --upgrade"
+alias nixclean="sudo nix-collect-garbage -d --delete-older-than 10d"
+alias nixup="sudo nix-channel --update"
 alias svim="sudo vim"
 # ==============================
 # Aliases - Git

@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# TODO: 󰗊: Language Switcher
 # Start essential programs
 sxhkd &
 
@@ -34,23 +33,35 @@ picom &
 # Start Notifications Dunst
 dunst &
 
-# Set wallpaper
-feh --bg-fill --randomize ~/Pictures/wallpaper/* &
-
-# Kill existing polybar instances
-killall -q polybar
-# Wait until the processes have been shut down
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-
-# Launch polybar
-nm-applet &
-polybar main &
-
 # Start greenclip if not already running
 pgrep -x greenclip || greenclip daemon &
 
-# Monitor settings
-bspc monitor -d   󰬡  󰍩  󰽰    
+# Monitor setup - detect monitors and configure them
+if [[ $(xrandr -q | grep -c " connected") -eq 2 ]]; then
+    # Two monitors connected
+    # Get monitor names
+    PRIMARY=$(xrandr -q | grep " connected primary" | cut -d ' ' -f1)
+    SECONDARY=$(xrandr -q | grep " connected" | grep -v "primary" | head -n 1 | cut -d ' ' -f1)
+ 
+    # Configure workspaces for each monitor
+    bspc monitor $SECONDARY -d     
+    bspc monitor $PRIMARY -d 󰖟 󰬡 󰍩   
+    
+    # Set secondary monitor to rotate 90 degrees right
+    xrandr --output $SECONDARY --auto --output $PRIMARY --auto --right-of $SECONDARY --rotate left
+    
+    # Launch polybar for each monitor using the launch script
+    ~/.config/polybar/scripts/launch.sh
+else
+    # Single monitor setup
+    bspc monitor -d     󰽰 󰬡 󰍩   
+    # Launch polybar for single monitor
+    ~/.config/polybar/scripts/launch.sh
+fi
+
+# Set wallpaper
+feh --bg-fill --randomize ~/Pictures/wallpaper/* &
+
 
 # Global settings
 bspc config border_width         4
@@ -61,8 +72,6 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
 # Window rules
-#
-# App Rules
 bspc rule -a firefox desktop='^2'
 bspc rule -a Zotero desktop='^3'
 bspc rule -a obsidian desktop='^4'
@@ -70,21 +79,14 @@ bspc rule -a Slack desktop='^6'
 bspc rule -a Signal desktop='^5'
 bspc rule -a obs desktop='^8'
 
-# Custom Rules
-bspc rule -a yazi state=floating center=true
+bspc rule -a mpv state=floating center=true
 bspc rule -a markdown_cheatsheet state=floating sticky=on center=true rectangle=800x600+0+0
 bspc rule -a Pavucontrol state=floating center=true
 
-# Autostart applications (all except OBS)
 firefox &
+brave &
 zotero &
 obsidian &
+signal-desktop &
 slack &
-# signal-desktop &
-# ncspot &
 # obs &
-
-# Start Ghostty terminal on desktop 9 pointing to /etc/nixos
-# ghostty --class nixos --working-directory /etc/nixos &
-
-# Switch to desktop 9 after starting Ghostty
