@@ -52,10 +52,26 @@ if [[ $(xrandr -q | grep -c " connected") -eq 2 ]]; then
     
     # Launch polybar for each monitor using the launch script
     ~/.config/polybar/scripts/launch.sh
+    bspc rule -a firefox desktop='^2'
+    bspc rule -a Zotero desktop='^3'
+    bspc rule -a obsidian desktop='^4'
+    bspc rule -a Slack desktop='^6'
+    bspc rule -a Signal desktop='^5'
+    bspc rule -a obs desktop='^8'
+
+
 else
     # Single monitor setup
-    bspc monitor -d     󰽰 󰬡 󰍩   
+    bspc monitor -d    󰬡 󰍩  󰽰  
     # Launch polybar for single monitor
+    bspc rule -a firefox desktop='^2'
+    bspc rule -a Zotero desktop='^3'
+    bspc rule -a obsidian desktop='^4'
+    bspc rule -a Signal desktop='^5'
+    bspc rule -a Slack desktop='^6'
+    bspc rule -a obs desktop='^8'
+
+
     ~/.config/polybar/scripts/launch.sh
 fi
 
@@ -72,13 +88,6 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
 # Window rules
-bspc rule -a firefox desktop='^2'
-bspc rule -a Zotero desktop='^3'
-bspc rule -a obsidian desktop='^4'
-bspc rule -a Slack desktop='^6'
-bspc rule -a Signal desktop='^5'
-bspc rule -a obs desktop='^8'
-
 bspc rule -a mpv state=floating center=true
 bspc rule -a markdown_cheatsheet state=floating sticky=on center=true rectangle=800x600+0+0
 bspc rule -a Pavucontrol state=floating center=true
