@@ -72,12 +72,11 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
 # Window rules
-bspc rule -a firefox desktop='^4'
-bspc rule -a brave desktop='^5'
-bspc rule -a Zotero desktop='^6'
-bspc rule -a obsidian desktop='^3'
-bspc rule -a Signal desktop='^7'
-bspc rule -a Slack desktop='^2'
+bspc rule -a firefox desktop='^2'
+bspc rule -a Zotero desktop='^3'
+bspc rule -a obsidian desktop='^4'
+bspc rule -a Slack desktop='^6'
+bspc rule -a Signal desktop='^5'
 bspc rule -a obs desktop='^8'
 
 bspc rule -a mpv state=floating center=true
