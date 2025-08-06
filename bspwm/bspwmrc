@@ -44,7 +44,7 @@ if [[ $(xrandr -q | grep -c " connected") -eq 2 ]]; then
     SECONDARY=$(xrandr -q | grep " connected" | grep -v "primary" | head -n 1 | cut -d ' ' -f1)
  
     # Configure workspaces for each monitor
-    bspc monitor $SECONDARY -d     
+    bspc monitor $SECONDARY -d     
     bspc monitor $PRIMARY -d 󰖟 󰬡 󰍩   
     
     # Set secondary monitor to rotate 90 degrees right
@@ -65,8 +65,8 @@ else
     bspc monitor -d    󰬡 󰍩  󰽰  
     # Launch polybar for single monitor
     bspc rule -a firefox desktop='^2'
-    bspc rule -a Zotero desktop='^3'
-    bspc rule -a obsidian desktop='^4'
+    bspc rule -a obsidian desktop='^3'
+    bspc rule -a Zotero desktop='^4'
     bspc rule -a Signal desktop='^5'
     bspc rule -a Slack desktop='^6'
     bspc rule -a obs desktop='^8'

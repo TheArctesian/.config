@@ -29,6 +29,7 @@ alias py="python3"
 alias server="browser-sync start -s -f . --no-notify --host $LOCAL_UP --port 9000"
 alias clok="tty-clock -c -C 4 -S"
 alias copy="xclip -sel c <"
+alias zel="zellij --layout ~/.config/zellij/pro.kdl $argv"
 
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -120,6 +121,7 @@ alias tmux="zellij"
 alias du="dust"
 alias find="fd"
 alias cowsay="neo-cowsay"
+alias cp="xcp"
 
 # ==============================
 # Aliases - Directory Shortcuts

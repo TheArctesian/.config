@@ -1,6 +1,6 @@
 {
     "DesktopAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 520093700,
         "name": "Desktop Audio",
         "uuid": "89c4a09b-467f-436c-8121-88ddafd9cc84",
         "id": "pulse_output_capture",
@@ -31,7 +31,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 520093700,
         "name": "Mic/Aux",
         "uuid": "3f93663a-fc64-4bb3-99ce-70255e5f7865",
         "id": "pulse_input_capture",
@@ -61,8 +61,8 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "Split Video Screen 2",
-    "current_program_scene": "Split Video Screen 2",
+    "current_scene": "Camrea Only",
+    "current_program_scene": "Camrea Only",
     "scene_order": [
         {
             "name": "Video Screen Small"
@@ -75,6 +75,9 @@
         },
         {
             "name": "Camrea Only"
+        },
+        {
+            "name": "Demo Screen"
         },
         {
             "name": "Split Video Screen"
@@ -92,7 +95,7 @@
     "name": "Untitled 2",
     "sources": [
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "BG Only",
             "uuid": "69a1b805-1ddc-42f5-a421-e6cf2a5d6ee2",
             "id": "scene",
@@ -294,7 +297,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Camrea Only",
             "uuid": "26d8b341-523e-44c0-9866-1bd9fd96606d",
             "id": "scene",
@@ -553,7 +556,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "cc",
             "uuid": "3a657222-28ef-4d78-8fdc-325422745e06",
             "id": "text_ft2_source",
@@ -585,7 +588,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Colour Source",
             "uuid": "9c815fb4-abba-41ff-bedd-898003fca0c2",
             "id": "color_source",
@@ -611,7 +614,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Display Capture (XSHM)",
             "uuid": "8631e84c-fcce-4c6f-872e-ec19c2fedc78",
             "id": "xshm_input_v2",
@@ -637,7 +640,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Name",
             "uuid": "646dd390-b1aa-4315-bdfd-44f9e421ef97",
             "id": "text_ft2_source",
@@ -669,7 +672,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Screen Only",
             "uuid": "42eea0b4-44aa-4e8a-8c2b-2919e8c79e85",
             "id": "scene",
@@ -1042,7 +1045,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Split Video Screen",
             "uuid": "ee2b43bd-7149-479e-a598-08939129dbed",
             "id": "scene",
@@ -1419,7 +1422,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Text",
             "uuid": "58fffcfd-8e1f-4b5d-ba86-675d5aea79e4",
             "id": "text_ft2_source",
@@ -1451,7 +1454,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Video Capture Device (V4L2)",
             "uuid": "7fb9359a-fbff-4b56-98f8-e57bded6c8aa",
             "id": "v4l2_input",
@@ -1480,13 +1483,102 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "Sharpen",
                     "uuid": "ac230941-a72b-427a-aa92-8a9164a854b2",
                     "id": "sharpness_filter",
                     "versioned_id": "sharpness_filter_v2",
                     "settings": {
-                        "sharpness": 0.12
+                        "sharpness": 0.62
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 520093700,
+                    "name": "Colour Correction",
+                    "uuid": "95afe595-c8b1-4a59-93ec-3b4dabe3f3b2",
+                    "id": "color_filter",
+                    "versioned_id": "color_filter_v2",
+                    "settings": {
+                        "saturation": 0.19,
+                        "contrast": 1.0800000000000001,
+                        "brightness": 0.30659999999999998,
+                        "gamma": 1.1699999999999999,
+                        "hue_shift": -122.23
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 520093700,
+                    "name": "Luma Key",
+                    "uuid": "8d3e0f95-5ae0-46b2-9eaa-b796c40974dd",
+                    "id": "luma_key_filter",
+                    "versioned_id": "luma_key_filter_v2",
+                    "settings": {
+                        "luma_max_smooth": 0.49399999999999999,
+                        "luma_min": 0.55649999999999999,
+                        "luma_min_smooth": 0.071400000000000005,
+                        "luma_max": 1.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 520093700,
+                    "name": "Colour Key",
+                    "uuid": "07bdabfa-4f13-4bf8-af77-1d32bc0834cd",
+                    "id": "color_key_filter",
+                    "versioned_id": "color_key_filter_v2",
+                    "settings": {
+                        "key_color_type": "red",
+                        "similarity": 101,
+                        "contrast": 1.53,
+                        "brightness": -0.085000000000000006,
+                        "gamma": 1.0
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -1508,7 +1600,7 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Video Screen Small",
             "uuid": "bc017490-d8a8-4c22-86b8-4d8aad0f73f4",
             "id": "scene",
@@ -1767,7 +1859,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Video Screen Split",
             "uuid": "0bccd80a-4a5b-4c4e-938f-f8602e3e5a1d",
             "id": "scene",
@@ -2083,7 +2175,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Display Capture (XSHM) 2",
             "uuid": "e9f34b1d-6600-4d62-846d-6403d0b41ffc",
             "id": "xshm_input_v2",
@@ -2109,7 +2201,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Video Screen Split Camrea",
             "uuid": "019f73d0-2581-48a6-89eb-c9ee0d50a18e",
             "id": "scene",
@@ -2539,7 +2631,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Split Video Screen 2",
             "uuid": "51c2920f-943e-43a2-8e74-2ec16186f614",
             "id": "scene",
@@ -2907,6 +2999,208 @@
                 "libobs.hide_scene_item.4": [],
                 "libobs.show_scene_item.5": [],
                 "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093700,
+            "name": "Demo Screen",
+            "uuid": "1b5ef1d0-b8e7-499e-879f-4e6bb7487023",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 6,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Colour Source",
+                        "source_uuid": "9c815fb4-abba-41ff-bedd-898003fca0c2",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "cc",
+                        "source_uuid": "3a657222-28ef-4d78-8fdc-325422745e06",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 4,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1793.0,
+                            "y": 10.0
+                        },
+                        "pos_rel": {
+                            "x": 1.5425926446914673,
+                            "y": -0.98148149251937866
+                        },
+                        "scale": {
+                            "x": 0.063311688601970673,
+                            "y": 0.063829787075519562
+                        },
+                        "scale_rel": {
+                            "x": 0.063311688601970673,
+                            "y": 0.063829787075519562
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Display Capture (XSHM)",
+                        "source_uuid": "8631e84c-fcce-4c6f-872e-ec19c2fedc78",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 141.0,
+                            "y": 28.0
+                        },
+                        "pos_rel": {
+                            "x": -1.5166666507720947,
+                            "y": -0.94814813137054443
+                        },
+                        "scale": {
+                            "x": 0.63984376192092896,
+                            "y": 0.63999998569488525
+                        },
+                        "scale_rel": {
+                            "x": 0.63984376192092896,
+                            "y": 0.63999998569488525
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": [],
                 "libobs.show_scene_item.6": [],
                 "libobs.hide_scene_item.6": []
             },

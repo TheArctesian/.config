@@ -87,4 +87,3 @@ palette = 15=#ffffff
 
 # Other settings
 cursor-style = "block"
-keybind = shift+enter=text:\n
