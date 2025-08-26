@@ -119,7 +119,9 @@ alias curl="xh"
 alias tmux="zellij"
 alias du="dust"
 alias find="fd"
-alias cowsay="neo-cowsay"
+alias df="dysk"
+alias cp="xcp"
+# alias cowsay="neo-cowsay"
 
 # ==============================
 # Aliases - Directory Shortcuts
@@ -136,6 +138,7 @@ alias skl="cd $HOME/Scripts/School"
 alias per="cd $HOME/Scripts/Personal"
 alias wrk="cd $HOME/Scripts/Work"
 alias pro="cd $HOME/Scripts/Project"
+alias gam="cd $HOME/Scripts/Game"
 
 # ==============================
 # Aliases - Nix OS

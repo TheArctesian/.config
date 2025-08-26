@@ -1,3 +1,7 @@
+# Toggle workspace display mode when Super key is pressed
+# super
+ #   ~/.config/polybar/scripts/workspace-toggle.sh
+
 # terminal emulator
 super + shift + Return
 	ghostty

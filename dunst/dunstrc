@@ -35,8 +35,6 @@
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     idle_threshold = 120
     
-    # Default timeout (in seconds)
-    timeout = 2  # Default 2 seconds for all notifications
 
     ### Text ###
     font = JetBrainsMono Nerd Font 10
@@ -132,6 +130,3 @@
     frame_color = "#E06C75"
     timeout = 6
 
-[brave]
-timeout = 0
-format = %s

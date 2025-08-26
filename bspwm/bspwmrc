@@ -44,8 +44,10 @@ if [[ $(xrandr -q | grep -c " connected") -eq 2 ]]; then
     SECONDARY=$(xrandr -q | grep " connected" | grep -v "primary" | head -n 1 | cut -d ' ' -f1)
  
     # Configure workspaces for each monitor
-    bspc monitor $SECONDARY -d     
-    bspc monitor $PRIMARY -d 󰖟 󰬡 󰍩   
+    #                          1 2 3 4 5
+    bspc monitor $SECONDARY -d      
+    #                        6 7 8 9 0
+    bspc monitor $PRIMARY -d 󰖟 󰬡 󰍩  
     
     # Set secondary monitor to rotate 90 degrees right
     xrandr --output $SECONDARY --auto --output $PRIMARY --auto --right-of $SECONDARY --rotate left
@@ -72,13 +74,14 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
 # Window rules
-bspc rule -a firefox desktop='^4'
-bspc rule -a brave desktop='^5'
-bspc rule -a Zotero desktop='^6'
-bspc rule -a obsidian desktop='^3'
-bspc rule -a Signal desktop='^7'
-bspc rule -a Slack desktop='^2'
-bspc rule -a obs desktop='^8'
+bspc rule -a Slack desktop='^3'
+bspc rule -a obsidian desktop='^4'
+bspc rule -a firefox desktop='^5'
+bspc rule -a brave desktop='^6'
+bspc rule -a Zotero desktop='^7'
+bspc rule -a Signal desktop='^8'
+bspc rule -a obs desktop='^9'
+
 
 bspc rule -a mpv state=floating center=true
 bspc rule -a markdown_cheatsheet state=floating sticky=on center=true rectangle=800x600+0+0
