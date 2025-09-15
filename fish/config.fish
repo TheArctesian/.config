@@ -121,7 +121,7 @@ alias tmux="zellij"
 alias du="dust"
 alias find="fd"
 alias df="dysk"
-alias cp="xcp"
+# alias cp="xcp"
 # alias cowsay="neo-cowsay"
 
 # ==============================
