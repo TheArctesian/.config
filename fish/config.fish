@@ -30,6 +30,7 @@ alias server="browser-sync start -s -f . --no-notify --host $LOCAL_UP --port 900
 alias clok="tty-clock -c -C 4 -S"
 alias copy="xclip -sel c <"
 alias zel="zellij --layout ~/.config/zellij/pro.kdl $argv"
+alias xel="zellij --layout ~/.config/zellij/codex.kdl $argv"
 
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -138,6 +139,7 @@ alias skl="cd $HOME/Scripts/School"
 alias per="cd $HOME/Scripts/Personal"
 alias wrk="cd $HOME/Scripts/Work"
 alias pro="cd $HOME/Scripts/Project"
+alias org="cd $HOME/Scripts/Organising"
 
 # ==============================
 # Aliases - Nix OS

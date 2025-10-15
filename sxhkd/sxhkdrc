@@ -148,7 +148,7 @@ Print
 
 # Interactive screenshot (select area) 
 super + shift + s
-    flameshot gui -c
+    flameshot gui
 
 # Delayed screenshot (3 seconds) - Control + Print
 control + Print

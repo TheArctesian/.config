@@ -2,10 +2,8 @@ layout {
     pane split_direction="horizontal" {
         pane split_direction="vertical" size="80%" {
             pane command="yazi" {}
-            pane command="npx" {
-                args "@anthropic-ai/claude-code"
-            }
-        }
+            pane command="claude" {}
+          }
         pane size="30%" command="bash" {}
     }
 }

@@ -1,0 +1,16 @@
+{
+	"warnBeforeExit": true,
+	"minimizeToTray": true,
+	"spellCheckerEnabled": true,
+	"autoHideMenuBar": true,
+	"disableHardwareAcceleration": false,
+	"enableContentProtection": false,
+	"safeStorageBackend": "basic_text",
+	"locale": [
+		"en"
+	],
+	"safeStorage": {
+		"@stephenokita:matrix-org|c7MaeYnvDb": "djEwGQeWTPoNs0yyiRraNezpTDc7Bz5q3m13uAay2XE9W+fUSkHH/hG1Q0k90xiU/VAD",
+		"seshat|@stephenokita:matrix-org|c7MaeYnvDb": "djEwvnZgvSFqNuJ1LZ/x8uPgbys4pXUHtczqAGVh5od71VEj7H0x+MXdWs0yp4wEEDR4"
+	}
+}
