@@ -1,0 +1,21 @@
+2025/10/30-16:06:14.523 14a2 Reusing MANIFEST /home/okita/.config/teams-for-linux/Partitions/teams-4-linux/WebStorage/2/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2025/10/30-16:06:14.523 14a2 Recovering log #10
+2025/10/30-16:06:14.527 14a2 Reusing old log /home/okita/.config/teams-for-linux/Partitions/teams-4-linux/WebStorage/2/IndexedDB/indexeddb.leveldb/000010.log 
+2025/10/30-16:06:18.585 14a2 Level-0 table #15: started
+2025/10/30-16:06:18.593 14a2 Level-0 table #15: 2309556 bytes OK
+2025/10/30-16:06:18.594 14a2 Delete type=0 #10
+2025/10/30-16:06:18.595 14a2 Compacting 1@1 + 1@2 files
+2025/10/30-16:06:18.614 14a2 Generated table #16@1: 4645 keys, 2059976 bytes
+2025/10/30-16:06:18.614 14a2 Compacted 1@1 + 1@2 files => 2059976 bytes
+2025/10/30-16:06:18.614 14a2 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/10/30-16:06:38.658 14a3 Level-0 table #18: started
+2025/10/30-16:06:38.667 14a3 Level-0 table #18: 2270217 bytes OK
+2025/10/30-16:06:38.668 14a3 Delete type=0 #14
+2025/10/30-16:06:38.668 14a3 Delete type=2 #15
+2025/10/30-16:06:38.668 14a3 Delete type=2 #12
+2025/10/30-16:06:38.685 14a3 Compacting 1@1 + 1@2 files
+2025/10/30-16:06:38.700 14a3 Generated table #19@1: 3994 keys, 2050762 bytes
+2025/10/30-16:06:38.700 14a3 Compacted 1@1 + 1@2 files => 2050762 bytes
+2025/10/30-16:06:38.701 14a3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/10/30-16:06:38.701 14a3 Delete type=2 #16
+2025/10/30-16:06:38.701 14a3 Delete type=2 #18

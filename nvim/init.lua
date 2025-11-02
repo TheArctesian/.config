@@ -43,7 +43,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- Essential plugins
 	"nvim-lua/plenary.nvim", -- Required by many plugins
-
+	"brenoprata10/nvim-highlight-colors",
 	-- Fuzzy finder and file navigation
 	{
 		"nvim-telescope/telescope.nvim",
@@ -107,15 +107,22 @@ require("lazy").setup({
 		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
 
 			-- Setup language servers for Svelte, Go, Python, React (TypeScript/JavaScript), and TypeScript
-			lspconfig.pyright.setup({ capabilities = capabilities }) -- Python
-			lspconfig.gopls.setup({ capabilities = capabilities }) -- Go
-			lspconfig.ts_ls.setup({ capabilities = capabilities }) -- TypeScript/JavaScript (React) - Updated from tsserver to ts_ls
-			lspconfig.svelte.setup({ capabilities = capabilities }) -- Svelte
-			lspconfig.html.setup({ capabilities = capabilities }) -- HTML (for React/Svelte)
-			lspconfig.cssls.setup({ capabilities = capabilities }) -- CSS (for React/Svelte)
+			vim.lsp.config.pyright = { capabilities = capabilities } -- Python
+			vim.lsp.config.gopls = { capabilities = capabilities } -- Go
+			vim.lsp.config.ts_ls = { capabilities = capabilities } -- TypeScript/JavaScript (React)
+			vim.lsp.config.svelte = { capabilities = capabilities } -- Svelte
+			vim.lsp.config.html = { capabilities = capabilities } -- HTML (for React/Svelte)
+			vim.lsp.config.cssls = { capabilities = capabilities } -- CSS (for React/Svelte)
+
+			-- Enable the language servers
+			vim.lsp.enable("pyright")
+			vim.lsp.enable("gopls")
+			vim.lsp.enable("ts_ls")
+			vim.lsp.enable("svelte")
+			vim.lsp.enable("html")
+			vim.lsp.enable("cssls")
 
 			-- Completion setup
 			local cmp = require("cmp")
@@ -178,13 +185,13 @@ require("lazy").setup({
 			}
 			local hooks = require("ibl.hooks")
 			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-				vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
-				vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
-				vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
-				vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-				vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-				vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
-				vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+				vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#BF616A" })
+				vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#EBCB8B" })
+				vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#88C0D0" })
+				vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D08770" })
+				vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#A3BE8C" })
+				vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#B48EAD" })
+				vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#8FBCBB" })
 			end)
 			require("ibl").setup({
 				indent = { char = "▏" },
@@ -211,7 +218,7 @@ require("lazy").setup({
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = "onedark",
+					theme = "nord",
 					icons_enabled = true,
 					component_separators = { left = "|", right = "|" },
 					section_separators = { left = "", right = "" },
@@ -239,16 +246,16 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Theme (Atom One Dark)
+	-- Theme (Nord)
 	{
-		"navarasu/onedark.nvim",
+		"shaunsingh/nord.nvim",
 		config = function()
-			require("onedark").setup({
-				style = "dark", -- Options: 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer'
-				transparent = true, -- Enable transparency
-				term_colors = true, -- Set terminal colors
-			})
-			require("onedark").load()
+			vim.g.nord_contrast = true
+			vim.g.nord_borders = false
+			vim.g.nord_disable_background = true
+			vim.g.nord_italic = false
+			vim.g.nord_uniform_diff_background = true
+			require("nord").set()
 		end,
 	},
 
@@ -324,6 +331,10 @@ require("lazy").setup({
 	},
 	{ "jose-elias-alvarez/null-ls.nvim" },
 })
+-- Ensure termguicolors is enabled if not already
+vim.opt.termguicolors = true
+
+require("nvim-highlight-colors").setup({})
 
 -- Make background transparent (100% transparency)
 vim.api.nvim_set_hl(0, "Normal", { bg = "none", ctermbg = "none" })

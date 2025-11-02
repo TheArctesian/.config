@@ -2,7 +2,7 @@ configuration {
     modi: "drun,run,window,ssh";
     font: "JetBrainsMono Nerd Font 12";
     show-icons: true;
-    icon-theme: "Papirus-Dark";
+    icon-theme: "Nordzy-dark";
     terminal: "ghostty";
     
     // Grid layout settings

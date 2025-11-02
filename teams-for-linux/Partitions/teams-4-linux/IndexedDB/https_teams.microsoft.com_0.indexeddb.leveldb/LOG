@@ -1,0 +1,44 @@
+2025/10/30-22:43:31.225 2fe6 Reusing MANIFEST /home/okita/.config/teams-for-linux/Partitions/teams-4-linux/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/10/30-22:43:31.225 2fe6 Recovering log #777
+2025/10/30-22:43:31.228 2fe6 Reusing old log /home/okita/.config/teams-for-linux/Partitions/teams-4-linux/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/000777.log 
+2025/10/31-11:00:58.463 2fe7 Level-0 table #793: started
+2025/10/31-11:00:58.479 2fe7 Level-0 table #793: 1886906 bytes OK
+2025/10/31-11:00:58.481 2fe7 Delete type=0 #777
+2025/10/31-11:06:45.628 2fe7 Compacting 1@1 + 6@2 files
+2025/10/31-11:06:45.645 2fe7 Generated table #794@1: 5287 keys, 2156434 bytes
+2025/10/31-11:06:45.654 2fe7 Generated table #795@1: 746 keys, 2144943 bytes
+2025/10/31-11:06:45.663 2fe7 Generated table #796@1: 738 keys, 2143236 bytes
+2025/10/31-11:06:45.674 2fe7 Generated table #797@1: 742 keys, 2149117 bytes
+2025/10/31-11:06:45.685 2fe7 Generated table #798@1: 5594 keys, 2149206 bytes
+2025/10/31-11:06:45.691 2fe7 Generated table #799@1: 6198 keys, 474634 bytes
+2025/10/31-11:06:45.691 2fe7 Compacted 1@1 + 6@2 files => 11217570 bytes
+2025/10/31-11:06:45.692 2fe7 compacted to: files[ 0 0 6 0 0 0 0 ]
+2025/10/31-11:06:45.692 2fe7 Delete type=2 #784
+2025/10/31-11:06:45.693 2fe7 Delete type=2 #790
+2025/10/31-11:06:45.693 2fe7 Delete type=2 #785
+2025/10/31-11:06:45.693 2fe7 Delete type=2 #783
+2025/10/31-11:06:45.693 2fe7 Delete type=2 #793
+2025/10/31-11:06:45.693 2fe7 Delete type=2 #788
+2025/10/31-11:06:45.693 2fe7 Delete type=2 #789
+2025/10/31-16:05:49.667 2fe7 Level-0 table #801: started
+2025/10/31-16:05:49.675 2fe7 Level-0 table #801: 838041 bytes OK
+2025/10/31-16:05:49.680 2fe7 Delete type=0 #792
+2025/10/31-16:05:49.681 2fe7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2025/10/31-16:05:49.681 2fe7 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00Z\x01\x02\x01\x08\x00p\x00o\x00l\x00i\x00c\x00i\x00e\x00s' @ 789566 : 1
+2025/10/31-16:05:49.681 2fe7 Compacting 1@1 + 6@2 files
+2025/10/31-16:05:49.698 2fe7 Generated table #802@1: 5121 keys, 2156122 bytes
+2025/10/31-16:05:49.715 2fe7 Generated table #803@1: 749 keys, 2145535 bytes
+2025/10/31-16:05:49.731 2fe7 Generated table #804@1: 736 keys, 2146089 bytes
+2025/10/31-16:05:49.748 2fe7 Generated table #805@1: 743 keys, 2144397 bytes
+2025/10/31-16:05:49.765 2fe7 Generated table #806@1: 5952 keys, 2149747 bytes
+2025/10/31-16:05:49.768 2fe7 Generated table #807@1: 5781 keys, 403228 bytes
+2025/10/31-16:05:49.768 2fe7 Compacted 1@1 + 6@2 files => 11145118 bytes
+2025/10/31-16:05:49.769 2fe7 compacted to: files[ 0 0 6 0 0 0 0 ]
+2025/10/31-16:05:49.769 2fe7 Delete type=2 #797
+2025/10/31-16:05:49.769 2fe7 Delete type=2 #801
+2025/10/31-16:05:49.769 2fe7 Delete type=2 #794
+2025/10/31-16:05:49.769 2fe7 Delete type=2 #795
+2025/10/31-16:05:49.769 2fe7 Delete type=2 #799
+2025/10/31-16:05:49.769 2fe7 Delete type=2 #798
+2025/10/31-16:05:49.769 2fe7 Delete type=2 #796
+2025/10/31-16:05:49.771 2fe7 Manual compaction at level-1 from '\x00Z\x01\x02\x01\x08\x00p\x00o\x00l\x00i\x00c\x00i\x00e\x00s' @ 789566 : 1 .. (end); will stop at (end)

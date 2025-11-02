@@ -1,0 +1,410 @@
+/* Nord Color Palette */
+@define-color nord0 #2e3440;
+@define-color nord1 #3b4252;
+@define-color nord2 #434c5e;
+@define-color nord3 #4c566a;
+@define-color nord4 #d8dee9;
+@define-color nord5 #e5e9f0;
+@define-color nord6 #eceff4;
+@define-color nord7 #8fbcbb;
+@define-color nord8 #88c0d0;
+@define-color nord9 #81a1c1;
+@define-color nord10 #5e81ac;
+@define-color nord11 #bf616a;
+@define-color nord12 #d08770;
+@define-color nord13 #ebcb8b;
+@define-color nord14 #a3be8c;
+@define-color nord15 #b48ead;
+
+/* Global Styles */
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* Main Bar */
+window#waybar {
+    background-color: @nord0;
+    color: @nord4;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 10px;
+    border: 2px solid @nord3;
+}
+
+/* Top bar specific styling - Cleaner, minimal look */
+window#waybar.topbar {
+    background-color: @nord0;
+    border: 2px solid @nord3;
+}
+
+/* Bottom bar specific styling - Keep existing style */
+window#waybar.bottombar {
+    background-color: @nord0;
+    border: 2px solid @nord3;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Workspaces */
+#workspaces {
+    background-color: transparent;
+    margin: 0 0;
+    padding: 7px 5px;
+}
+
+#workspaces button {
+    padding: 2px 8px;
+    margin: 5px 3px;
+    color: @nord4;
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background-color: @nord2;
+    color: @nord6;
+    box-shadow: inherit;
+}
+
+#workspaces button.active {
+    background-color: @nord3;
+    color: @nord8;
+    border-bottom: 3px solid @nord8;
+}
+
+#workspaces button.urgent {
+    background-color: @nord11;
+    color: @nord6;
+    animation: urgent 0.5s ease infinite alternate;
+}
+
+/* Window Title */
+#window {
+    padding: 0 10px;
+    color: @nord4;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+/* Clock */
+#clock {
+    color: @nord6;
+    font-weight: bold;
+    border-radius: 8px;
+    border-color: @nord4;
+    border: 2px;
+}
+
+#clock:hover {
+    background-color: @nord2;
+}
+
+/* Tooltip */
+tooltip {
+    background-color: @nord1;
+    color: @nord6;
+    border: 2px solid @nord3;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+tooltip label {
+    color: @nord6;
+    padding: 5px;
+}
+
+/* Common module styles */
+#custom-cava,
+#custom-mullvad,
+#disk,
+#memory,
+#cpu,
+#custom-volume,
+#custom-brightness,
+#custom-clipboard,
+#battery,
+#tray,
+#custom-powermenu {
+    padding: 0 10px;
+    margin: 5px 3px;
+    color: @nord6;
+    background-color: @nord1;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Module hover effects */
+#custom-cava:hover,
+#custom-mullvad:hover,
+#disk:hover,
+#memory:hover,
+#cpu:hover,
+#custom-volume:hover,
+#custom-brightness:hover,
+#custom-clipboard:hover,
+#battery:hover,
+#custom-powermenu:hover {
+    background-color: @nord2;
+    color: @nord6;
+}
+
+/* Custom module colors */
+#custom-cava {
+    color: @nord7;
+    font-size: 16px;
+}
+
+#custom-mullvad {
+    color: @nord14;
+}
+
+#disk {
+    color: @nord10;
+}
+
+#memory {
+    color: @nord9;
+}
+
+#cpu {
+    color: @nord8;
+}
+
+#custom-clipboard {
+    color: @nord15;
+    font-size: 16px;
+}
+
+#battery {
+    color: @nord14;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @nord14;
+    background-color: @nord1;
+}
+
+#battery.warning:not(.charging) {
+    color: @nord13;
+    background-color: @nord1;
+    animation: warning 1s ease infinite alternate;
+}
+
+#battery.critical:not(.charging) {
+    color: @nord6;
+    background-color: @nord11;
+    animation: critical 0.5s ease infinite alternate;
+}
+
+#custom-powermenu {
+    color: @nord11;
+    font-size: 16px;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+#custom-powermenu:hover {
+    background-color: @nord11;
+    color: @nord6;
+}
+
+/* Tray */
+#tray {
+    background-color: transparent;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* Animations */
+@keyframes urgent {
+    from {
+        background-color: @nord11;
+    }
+    to {
+        background-color: @nord1;
+    }
+}
+
+@keyframes warning {
+    from {
+        background-color: @nord1;
+    }
+    to {
+        background-color: @nord13;
+        color: @nord0;
+    }
+}
+
+@keyframes critical {
+    from {
+        background-color: @nord11;
+    }
+    to {
+        background-color: @nord0;
+    }
+}
+
+/* Module separators */
+#workspaces button:first-child {
+    margin-left: 0;
+}
+
+#workspaces button:last-child {
+    margin-right: 0;
+}
+
+/* Active window border glow */
+window#waybar.focused {
+    border-color: @nord8;
+    box-shadow: 0 0 10px rgba(136, 192, 208, 0.3);
+}
+
+/* Module groups for organization */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 0 5px;
+}
+
+/* Custom styling for cava visualizer */
+#custom-cava {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    color: @nord7;
+    padding: 6px 5px;
+    margin: 0px 4px 10px 4px;
+    background-color: @nord1;
+    border-radius: 10px;
+    border: 2px solid @nord3;
+    transition: all 0.3s ease;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+#custom-cava:hover {
+    background-color: @nord2;
+    border-color: @nord7;
+}
+#pulseaudio {
+    color: @nord9;
+    padding: 3px 3px;
+    margin: 0px 4px 10px 4px;
+    background-color: @nord1;
+    border-radius: 10px;
+    border: 2px solid @nord3;
+    transition: all 0.3s ease;
+}
+
+#pulseaudio:hover {
+    background-color: @nord2;
+    border-color: @nord9;
+}
+
+#pulseaudio.muted {
+    color: @nord11;
+    border-color: @nord11;
+}
+
+#pulseaudio-slider {
+    padding: 5px 0px;
+    margin: 0px 4px 0px 4px;
+    background-color: @nord1;
+    border-radius: 10px;
+    border: 2px solid @nord3;
+    transition: all 0.3s ease;
+}
+
+#pulseaudio-slider:hover {
+    background-color: @nord2;
+    border-color: @nord9;
+}
+
+#pulseaudio-slider slider {
+    min-height: 2px;
+    min-width: 2px;
+    border-radius: 50%;
+    background-color: @nord9;
+    border: 2px solid @nord9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#pulseaudio-slider trough {
+    min-height: 120px;
+    min-width: 2px;
+    border-radius: 4px;
+    background-color: @nord2;
+    border: 1px solid @nord3;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 2px;
+    border-radius: 4px;
+    background-color: @nord9;
+    box-shadow: 0 0 5px rgba(136, 192, 208, 0.3);
+}
+
+/* Backlight modules - styled identically to pulseaudio */
+#backlight {
+    color: @nord13;
+    padding: 3px 3px;
+    margin: 0px 4px 0px 4px;
+    background-color: @nord1;
+    border-radius: 10px;
+    border: 2px solid @nord3;
+    transition: all 0.3s ease;
+}
+
+#backlight:hover {
+    background-color: @nord2;
+    border-color: @nord13;
+}
+
+#backlight-slider {
+    padding: 5px 0px;
+    margin: 0px 4px 0px 4px;
+    background-color: @nord1;
+    border-radius: 10px;
+    border: 2px solid @nord3;
+    transition: all 0.3s ease;
+}
+
+#backlight-slider:hover {
+    background-color: @nord2;
+    border-color: @nord13;
+}
+
+#backlight-slider slider {
+    min-height: 2px;
+    min-width: 2px;
+    border-radius: 50%;
+    background-color: @nord13;
+    border: 2px solid @nord13;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#backlight-slider trough {
+    min-height: 120px;
+    min-width: 2px;
+    border-radius: 4px;
+    background-color: @nord2;
+    border: 1px solid @nord3;
+}
+
+#backlight-slider highlight {
+    min-width: 2px;
+    border-radius: 4px;
+    background-color: @nord13;
+    box-shadow: 0 0 5px rgba(235, 203, 139, 0.3);
+}

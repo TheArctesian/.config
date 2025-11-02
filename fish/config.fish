@@ -3,11 +3,15 @@
 # ==============================
 
 # Paths
-fish_add_path $HOME/.cargo/bin
-fish_add_path $HOME/.spicetify
 fish_add_path $HOME/.local/bin
-fish_add_path $HOME/.emacs.d/bin
 
+# Environment Variables
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
+# OMF 
+set -g theme_nerd_fonts yes
+set -g theme_color_scheme nord
 # Initialize tools
 starship init fish | zoxide init fish | source
 
@@ -15,8 +19,10 @@ starship init fish | zoxide init fish | source
 # Greeting & Appearance
 # ==============================
 function fish_greeting
+    # Set random wallpaper from nord collection
+    ~/.config/hypr/scripts/random-wallpaper.sh
+    # Display system info
     pfetch
-    feh --bg-fill --randomize $HOME/Pictures/wallpaper/*
 end
 
 # ==============================
@@ -28,10 +34,29 @@ alias p="ping -c 3 gentoo.org"
 alias py="python3"
 alias server="browser-sync start -s -f . --no-notify --host $LOCAL_UP --port 9000"
 alias clok="tty-clock -c -C 4 -S"
-alias copy="xclip -sel c <"
 alias zel="zellij --layout ~/.config/zellij/pro.kdl $argv"
 alias xel="zellij --layout ~/.config/zellij/codex.kdl $argv"
 
+
+# Function to copy file contents to clipboard
+function copy
+    if test (count $argv) -eq 0
+        echo "Usage: copy [filename]"
+        return 1
+    end
+
+    set -l filename $argv[1]
+
+    if not test -f $filename
+        echo "Error: '$filename' is not a file"
+        return 1
+    end
+
+    # Copy file contents to clipboard
+    cat $filename | wl-copy
+
+    echo "Copied contents of '$filename' to clipboard"
+end
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	yazi $argv --cwd-file="$tmp"
@@ -56,11 +81,8 @@ function past
         echo "Backup saved as $backup"
     end
 
-    # Get clipboard content
-    set -l clipboard_content (xclip -sel c -o)
-    
-    # Write to file
-    echo $clipboard_content > $filename
+    # Get clipboard content using wl-paste and write to file
+    wl-paste > $filename
     
     # Ensure file is properly written by syncing filesystem
     sync
@@ -101,8 +123,8 @@ function copydir
         echo "" >> $temp_file
     end
 
-    # Copy to clipboard
-    cat $temp_file | xclip -sel c
+    # Copy to clipboard using wl-copy
+    cat $temp_file | wl-copy
     
     # Count files processed
     set -l file_count (fd --type f . $target_dir | wc -l)
@@ -146,7 +168,7 @@ alias org="cd $HOME/Scripts/Organising"
 # ==============================
 
 alias nixconf="sudo vim /etc/nixos/configuration.nix"
-alias nixrs="sudo nixos-rebuild switch"
+alias nixrs="sudo nixos-rebuild switch --flake /etc/nixos#nixos"
 alias nixrsug="sudo nixos-rebuild switch --upgrade"
 alias nixclean="sudo nix-collect-garbage -d --delete-older-than 10d"
 alias nixup="sudo nix-channel --update"
@@ -157,7 +179,3 @@ alias svim="sudo vim"
 alias pull="git pull"
 alias pus="git push"
 
-# ==============================
-# Aliases - Applications
-# ==============================
-alias doom="$HOME/.emacs.d/bin/doom"

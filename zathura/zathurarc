@@ -1,46 +1,46 @@
 set window-title-basename "true"
 set selection-clipboard "clipboard"
 
-# Atom One Dark color theme for Zathura
+# Nord color theme for Zathura
 
-set notification-error-bg       "#e06c75" # Red
-set notification-error-fg       "#abb2bf" # Foreground
-set notification-warning-bg     "#d19a66" # Orange
-set notification-warning-fg     "#282c34" # Background
-set notification-bg             "#282c34" # Background
-set notification-fg             "#abb2bf" # Foreground
+set notification-error-bg       "#bf616a" # Red
+set notification-error-fg       "#d8dee9" # Foreground
+set notification-warning-bg     "#d08770" # Orange
+set notification-warning-fg     "#2e3440" # Background
+set notification-bg             "#2e3440" # Background
+set notification-fg             "#d8dee9" # Foreground
 
-set completion-bg               "#282c34" # Background
-set completion-fg               "#5c6370" # Comment
-set completion-group-bg         "#282c34" # Background
-set completion-group-fg         "#5c6370" # Comment
-set completion-highlight-bg     "#3e4452" # Selection
-set completion-highlight-fg     "#abb2bf" # Foreground
+set completion-bg               "#2e3440" # Background
+set completion-fg               "#4c566a" # Comment
+set completion-group-bg         "#2e3440" # Background
+set completion-group-fg         "#4c566a" # Comment
+set completion-highlight-bg     "#3b4252" # Selection
+set completion-highlight-fg     "#d8dee9" # Foreground
 
-set index-bg                    "#282c34" # Background
-set index-fg                    "#abb2bf" # Foreground
-set index-active-bg             "#3e4452" # Current Line
-set index-active-fg             "#abb2bf" # Foreground
+set index-bg                    "#2e3440" # Background
+set index-fg                    "#d8dee9" # Foreground
+set index-active-bg             "#3b4252" # Current Line
+set index-active-fg             "#d8dee9" # Foreground
 
-set inputbar-bg                 "#282c34" # Background
-set inputbar-fg                 "#abb2bf" # Foreground
-set statusbar-bg                "#282c34" # Background
-set statusbar-fg                "#abb2bf" # Foreground
+set inputbar-bg                 "#2e3440" # Background
+set inputbar-fg                 "#d8dee9" # Foreground
+set statusbar-bg                "#2e3440" # Background
+set statusbar-fg                "#d8dee9" # Foreground
 
-set highlight-color             "#d19a66" # Orange
-set highlight-active-color      "#c678dd" # Purple
+set highlight-color             "#d08770" # Orange
+set highlight-active-color      "#b48ead" # Purple
 
-set default-bg                  "#282c34" # Background
-set default-fg                  "#abb2bf" # Foreground
+set default-bg                  "#2e3440" # Background
+set default-fg                  "#d8dee9" # Foreground
 
 set render-loading              true
-set render-loading-fg           "#282c34" # Background
-set render-loading-bg           "#abb2bf" # Foreground
+set render-loading-fg           "#2e3440" # Background
+set render-loading-bg           "#d8dee9" # Foreground
 
 # Recolor mode settings
 
-set recolor-lightcolor          "#282c34" # Background
-set recolor-darkcolor           "#abb2bf" # Foreground
+set recolor-lightcolor          "#2e3440" # Background
+set recolor-darkcolor           "#d8dee9" # Foreground
 
 # Startup options
 

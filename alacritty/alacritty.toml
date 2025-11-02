@@ -1,10 +1,38 @@
 [window]
-dynamic_title = true 
+dynamic_title = true
 decorations = "None"
 opacity = 0.8
 padding = { x = 20, y = 10 }
-blur = true 
+blur = true
 
 [font]
 size = 12.0
 offset = { x = 2, y = 2 }
+
+[colors.primary]
+background = "#2e3440"
+foreground = "#d8dee9"
+
+[colors.cursor]
+text = "#2e3440"
+cursor = "#d8dee9"
+
+[colors.normal]
+black = "#2e3440"
+red = "#bf616a"
+green = "#a3be8c"
+yellow = "#ebcb8b"
+blue = "#88c0d0"
+magenta = "#b48ead"
+cyan = "#8fbcbb"
+white = "#d8dee9"
+
+[colors.bright]
+black = "#4c566a"
+red = "#bf616a"
+green = "#a3be8c"
+yellow = "#ebcb8b"
+blue = "#88c0d0"
+magenta = "#b48ead"
+cyan = "#8fbcbb"
+white = "#eceff4"

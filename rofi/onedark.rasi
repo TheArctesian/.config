@@ -1,25 +1,25 @@
 * {
-    /* Atom One Dark colors */
-    background:     #282C34;
-    background-alt: #3E4452;
-    foreground:     #ABB2BF;
-    selected:       #61AFEF;
-    primary:        #61AFEF;
-    active:         #98C379;
-    urgent:         #E06C75;
-    alert:          #E06C75;
-    
+    /* Nord colors */
+    background:     #2E3440;
+    background-alt: #3B4252;
+    foreground:     #D8DEE9;
+    selected:       #88C0D0;
+    primary:        #88C0D0;
+    active:         #A3BE8C;
+    urgent:         #BF616A;
+    alert:          #BF616A;
+
     /* Dark/light variant */
     border-color:   @background-alt;
-    
+
     /* Additional colors */
-    purple:         #C678DD;
-    blue:           #61AFEF;
-    yellow:         #E5C07B;
-    orange:         #D19A66;
-    green:          #98C379;
-    red:            #E06C75;
-    cyan:           #56B6C2;
+    purple:         #B48EAD;
+    blue:           #88C0D0;
+    yellow:         #EBCB8B;
+    orange:         #D08770;
+    green:          #A3BE8C;
+    red:            #BF616A;
+    cyan:           #8FBCBB;
 }
 
 window {
